@@ -1,0 +1,110 @@
+[{
+  "_id": {
+    "$oid": "6543fa2cf9af2e73fd2e59f8"
+  },
+  "name": "Product",
+  "price": 1234000,
+  "quantity": 1121212,
+  "image": "http://res.cloudinary.com/dggciohw8/image/upload/v1698953794/mqqcm12e2cfsmz0ge3pb.png",
+  "description": "Testing",
+  "status": true,
+  "numberSold": 9,
+  "numberDiscount": 0,
+  "subCategoryId": {
+    "$oid": "6543f45a084c299dfc36ff88"
+  },
+  "categoryId": "6543ebc8084c299dfc36feaf",
+  "inventory": {
+    "$oid": "6543f9099dd8e41135f86bd8"
+  },
+  "createdAt": {
+    "$date": "2023-11-02T19:36:12.493Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T19:55:01.366Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6543fdf9febc495be1c11703"
+  },
+  "name": "Bùi Duy Hiếu",
+  "price": {
+    "$numberLong": "12321321123"
+  },
+  "quantity": 1,
+  "image": "http://res.cloudinary.com/dggciohw8/image/upload/v1698954767/hh6oyrv0n9ffdd8kpqni.png",
+  "description": "123",
+  "status": true,
+  "numberSold": 0,
+  "numberDiscount": 0,
+  "subCategoryId": {
+    "$oid": "6543fddffebc495be1c116ea"
+  },
+  "categoryId": "6543fdb6febc495be1c116c4",
+  "inventory": {
+    "$oid": "6543f9099dd8e41135f86bd9"
+  },
+  "createdAt": {
+    "$date": "2023-11-02T19:52:25.212Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T19:52:25.212Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65440003743ea1edcac1d141"
+  },
+  "name": "Khai Phu",
+  "price": 123,
+  "quantity": 121,
+  "image": "http://res.cloudinary.com/dggciohw8/image/upload/v1698955289/jygcjjogxvkygujmjogq.png",
+  "description": "3123213",
+  "status": true,
+  "numberSold": 0,
+  "numberDiscount": 0,
+  "subCategoryId": {
+    "$oid": "6543fddffebc495be1c116ea"
+  },
+  "categoryId": "6543fdb6febc495be1c116c4",
+  "inventory": {
+    "$oid": "6543f9099dd8e41135f86bda"
+  },
+  "createdAt": {
+    "$date": "2023-11-02T20:01:07.407Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T20:03:01.255Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65440118743ea1edcac1d184"
+  },
+  "name": "Food",
+  "price": 12312321,
+  "quantity": 12,
+  "image": "http://res.cloudinary.com/dggciohw8/image/upload/v1698955566/lxlgeqf5wi7yc9iv6vjo.png",
+  "description": "21",
+  "status": true,
+  "numberSold": 0,
+  "numberDiscount": 0,
+  "subCategoryId": {
+    "$oid": "6543fddffebc495be1c116ea"
+  },
+  "categoryId": "6543fdb6febc495be1c116c4",
+  "inventory": {
+    "$oid": "6543f9099dd8e41135f86b12"
+  },
+  "createdAt": {
+    "$date": "2023-11-02T20:05:44.927Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T20:05:44.927Z"
+  },
+  "__v": 0
+}]

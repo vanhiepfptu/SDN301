@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "6543f9099dd8e41135f86bd8"
+  },
+  "name": "Product A",
+  "quantity": 63,
+  "price": 25.99,
+  "unit": "pieces",
+  "date_of_manufacture": "2023-01-10T00:00:00.000Z",
+  "date_of_expiration": "2023-12-31T00:00:00.000Z",
+  "updatedAt": {
+    "$date": "2023-11-02T19:55:01.370Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6543f9099dd8e41135f86bd9"
+  },
+  "name": "Product B",
+  "quantity": 49,
+  "price": 12.49,
+  "unit": "pieces",
+  "date_of_manufacture": "2023-02-15T00:00:00.000Z",
+  "date_of_expiration": "2023-11-30T00:00:00.000Z",
+  "updatedAt": {
+    "$date": "2023-11-02T19:52:25.217Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6543f9099dd8e41135f86bda"
+  },
+  "name": "Product C",
+  "quantity": 187,
+  "price": 5.99,
+  "unit": "pieces",
+  "date_of_manufacture": "2023-03-20T00:00:00.000Z",
+  "date_of_expiration": "2023-09-30T00:00:00.000Z",
+  "updatedAt": {
+    "$date": "2023-11-02T20:03:01.264Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6543f9099dd8e41135f86b12"
+  },
+  "name": "Product D",
+  "quantity": 175,
+  "price": 5.99,
+  "unit": "pieces",
+  "date_of_manufacture": "2023-03-20T00:00:00.000Z",
+  "date_of_expiration": "2023-09-30T00:00:00.000Z",
+  "updatedAt": {
+    "$date": "2023-11-02T20:05:44.931Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "654400e39dd8e41135f86bf9"
+  },
+  "name": "Product E",
+  "quantity": 187,
+  "price": 5.99,
+  "unit": "pieces",
+  "date_of_manufacture": "2023-03-20T00:00:00.000Z",
+  "date_of_expiration": "2023-09-30T00:00:00.000Z",
+  "updatedAt": {
+    "$date": "2023-11-02T20:03:01.264Z"
+  }
+}]

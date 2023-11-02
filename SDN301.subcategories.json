@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6543f45a084c299dfc36ff88"
+  },
+  "name": "Tên",
+  "image": "http://res.cloudinary.com/dggciohw8/image/upload/v1698952304/idmvhwfombpxltzp7oqu.png",
+  "description": "",
+  "categoryId": {
+    "$oid": "6543ebc8084c299dfc36feaf"
+  },
+  "createdAt": {
+    "$date": "2023-11-02T19:11:22.874Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T19:11:22.874Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6543fddffebc495be1c116ea"
+  },
+  "name": "Pizza",
+  "image": "http://res.cloudinary.com/dggciohw8/image/upload/v1698954740/j8bcoicgnekh0plmexrm.png",
+  "description": "",
+  "categoryId": {
+    "$oid": "6543fdb6febc495be1c116c4"
+  },
+  "createdAt": {
+    "$date": "2023-11-02T19:51:59.209Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T19:51:59.209Z"
+  },
+  "__v": 0
+}]

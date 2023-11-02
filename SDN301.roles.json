@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "6543e24f082a27de865beb0d"
+  },
+  "roleId": 1,
+  "roleName": "admin",
+  "description": "admin account"
+},
+{
+  "_id": {
+    "$oid": "6543e24f082a27de865beb0e"
+  },
+  "roleId": 2,
+  "roleName": "shipping",
+  "description": "user account"
+},
+{
+  "_id": {
+    "$oid": "6543e24f082a27de865beb0f"
+  },
+  "roleId": 3,
+  "roleName": "staff",
+  "description": "staff account\n"
+}]

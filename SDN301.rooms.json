@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "6543e698084c299dfc36ef86"
+  },
+  "name": "staffne",
+  "createdAt": {
+    "$date": "2023-11-02T18:12:40.885Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T18:12:40.885Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6543ea71084c299dfc36fe50"
+  },
+  "name": "hiepga",
+  "createdAt": {
+    "$date": "2023-11-02T18:29:05.468Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T18:29:05.468Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6543fb9ef9af2e73fd2e5a7e"
+  },
+  "name": "userne",
+  "createdAt": {
+    "$date": "2023-11-02T19:42:22.273Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T19:42:22.273Z"
+  },
+  "__v": 0
+}]

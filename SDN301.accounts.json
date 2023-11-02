@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "6543e5d3084c299dfc36ef7e"
+  },
+  "username": "hiepga",
+  "password": "$2b$10$9lFq5xSh1W2uzoQQTcAfN.rJzuYVe1MVyxrpgz.RJARqDrBZKNRRy",
+  "role": {
+    "$oid": "650110164699e3d01b36a4f1"
+  },
+  "isActive": true,
+  "cart": [],
+  "createdAt": {
+    "$date": "2023-11-02T18:09:23.511Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T18:09:23.511Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6543e621084c299dfc36ef81"
+  },
+  "username": "staffne",
+  "password": "$2b$10$G7RNodVkIoTnJxKrq.t14exvsyIaUQpGJ.jWp0jgsDx3mfO0G4e2y",
+  "role": {
+    "$oid": "6543e24f082a27de865beb0e"
+  },
+  "isActive": true,
+  "cart": [],
+  "createdAt": {
+    "$date": "2023-11-02T18:10:41.386Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T18:10:41.386Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6543fb97f9af2e73fd2e5a79"
+  },
+  "username": "userne",
+  "password": "$2b$10$LN/Ili6hvl3VpWTU6TDZ5.89xSKKTBd4R.xUAtWRgOXghTLQKyxnW",
+  "role": {
+    "$oid": "650110164699e3d01b36a4f1"
+  },
+  "isActive": true,
+  "cart": [],
+  "createdAt": {
+    "$date": "2023-11-02T19:42:15.619Z"
+  },
+  "updatedAt": {
+    "$date": "2023-11-02T19:49:58.165Z"
+  },
+  "__v": 0
+}]
