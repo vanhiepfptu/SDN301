@@ -1,0 +1,84 @@
+.productsManager{
+    width: 100%x;
+    margin: 20px 10px 30px 40px;
+    .productsManagerTitle{
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--primary);
+        letter-spacing: 2.5px;
+        word-spacing: 5px;
+    }
+
+    .listProducts{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .addProduct{
+            width: 17%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            cursor: pointer;
+            background-color: rgba($color: #fff, $alpha: 0.8);
+            transition: .4s;
+            margin-bottom: 20px;
+            &:hover{
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            }
+            .defaultImg{
+                width: 100%;
+                height: 60%;
+                margin-bottom: 20px;
+                // object-fit: contain;
+            }
+
+            span{
+                padding-bottom: 10px;
+                font-weight: 500;
+                color: var(--primary);
+
+            }
+        }
+
+        .cardProduct{
+            width: 17%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+            cursor: pointer;
+            background-color: rgba($color: #fff, $alpha: 0.8);
+            transition: .4s;
+            height: 300px;
+            margin-bottom: 20px;
+
+
+             &:hover{
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            }
+
+            .productImg{
+                width: 100%;
+                height: 60%;
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+            span{   
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 10px 0;
+            }
+
+            .productPrice{
+                font-weight: 500;
+                color: var(--primary);
+            }
+        }
+    }
+}

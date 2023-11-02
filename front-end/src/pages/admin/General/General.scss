@@ -1,0 +1,162 @@
+.generalPage {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .listBoxInfor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+
+    .boxInfor1,
+    .boxInfor2,
+    .boxInfor3,
+    .boxInfor4 {
+      width: 30%;
+      display: flex;
+      // justify-content: space-around;
+      flex-direction: column;
+
+      .boxTitle {
+        padding: 10px 20px;
+
+        h4 {
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+        }
+
+        hr {
+          width: calc(100% + 40px);
+          margin-left: -20px;
+        }
+      }
+
+      .boxContent {
+        padding: 20px;
+        display: flex;
+
+        .leftBoxContent {
+          width: 50%;
+        }
+
+        .rightBoxContent {
+          width: 50%;
+        }
+
+        h5 {
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .boxInfor1 {
+      background-color: rgba($color: rgb(37, 171, 92), $alpha: 0.8);
+    }
+
+    .boxInfor2 {
+      background-color: rgba($color: rgb(90, 181, 209), $alpha: 0.8);
+    }
+
+    .boxInfor3 {
+      background-color: rgba($color: rgb(222, 63, 63), $alpha: 0.8);
+    }
+
+    .boxInfor4 {
+      background-color: rgba($color: rgb(183, 180, 16), $alpha: 0.8);
+    }
+  }
+
+  .detailInfor {
+    padding: 30px 16px;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .activity {
+      width: 30%;
+      border: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+
+      .activityHeader {
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-weight: 600;
+
+        i {
+          width: 20%;
+        }
+
+        .activityTitle {
+        }
+      }
+
+      .activityDetail {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        width: 100%;
+        background-color: rgba($color: #ccc, $alpha: 0.8);
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+        .incomeActivity {
+          display: flex;
+          justify-content: space-between;
+          margin: 8px 0;
+
+          span {
+          }
+
+          p {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .orderDetail {
+    }
+
+    .detailProduct {
+    }
+  }
+  .chartDiv {
+    display: flex;
+
+    .chartYear {
+      width: 50%;
+      margin-right: 10px;
+    }
+
+    .chartMonth {
+      width: 50%;
+      margin-left: 10px;
+    }
+    .buttonExport {
+      padding: 6px 16px;
+      outline: none;
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      border: 1px solid transparent;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+
+      .iconBtn {
+        margin-right: 6px;
+      }
+    }
+  }
+}

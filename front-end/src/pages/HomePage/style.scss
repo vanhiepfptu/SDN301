@@ -1,0 +1,71 @@
+.content {
+  padding: 0 100px;
+  display: grid;
+  grid-template-columns: 50% auto;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 120px;
+  overflow: hidden;
+
+  .content-left {
+    display: block;
+    width: 100%;
+
+    button {
+      padding: 10px 23px;
+      background-color: #ff511c;
+      color: #ffffff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: 0.4s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .info {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 60px;
+        font-family: sans-serif;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-size: 23px;
+        line-height: 2pc;
+        margin-bottom: 30px;
+        font-family: sans-serif;
+      }
+    }
+  }
+
+  .content-right {
+    display: block;
+    width: 1000%;
+
+    img {
+      width: 400px;
+      height: auto;
+      position: relative;
+      user-select: none;
+      animation: rotate 10s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

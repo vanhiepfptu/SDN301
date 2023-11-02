@@ -1,0 +1,314 @@
+.categoryManager {
+  padding: 30px;
+
+  .listCate,
+  .listSubCate {
+    // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    margin-bottom: 30px;
+
+    .listCateHeader,
+    .listSubCateHeader {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      .inputSearchCate,
+      .inputSearchSubCate {
+        padding: 8px 20px 8px 4px;
+        outline: none;
+        border: 1px solid transparent;
+        border-bottom: 2px solid #ccc;
+        transition: 0.4s;
+
+        &:focus {
+          border-bottom: 2px solid var(--primary);
+        }
+      }
+
+      button {
+        outline: none;
+        border: 1px solid transparent;
+        padding: 4px 12px;
+        background-color: var(--primary);
+        color: #fff;
+        cursor: pointer;
+        font-weight: 600;
+      }
+    }
+
+    .tableCate,
+    .tableSubCate {
+      .tableHeader {
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        background-color: rgba($color: #ccc, $alpha: 0.7);
+        color: rgba($color: #000, $alpha: 0.7);
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+        .nameHeader {
+          width: 28%;
+        }
+
+        .phoneHeader,
+        .addressHeader,
+        .productHeader,
+        .createdAt,
+        .quantityHeader {
+          width: 28%;
+        }
+      }
+
+      .tableBody {
+        // padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .rowBody {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1.5px solid #ccc;
+          align-items: center;
+
+          .nameBody {
+            width: 28%;
+            font-weight: 600;
+            display: flex;
+          }
+
+          .createAtBody,
+          .phoneBody,
+          .addressBody,
+          .quantityBody,
+          .createAtBody {
+            width: 25%;
+          }
+          .productBody {
+            width: 28%;
+            position: relative;
+
+            img {
+              width: 60%;
+              display: block;
+              height: auto;
+              transition: 0.5s ease;
+              backface-visibility: hidden;
+            }
+
+            .middle {
+              transition: 0.5s ease;
+              opacity: 0; /* Thay đổi thành 0 để ẩn ngay từ đầu */
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-105%, -50%);
+              -ms-transform: translate(-105%, -50%);
+              text-align: center;
+
+              .text {
+                font-size: 16px;
+                padding: 16px 20px;
+                cursor: pointer;
+
+                // button {
+                //   border: none;
+                //   font-size: 0px;
+                // }
+              }
+            }
+
+            &:hover img {
+              opacity: 0.3;
+            }
+
+            &:hover .middle {
+              opacity: 1; /* Thay đổi thành 1 khi di chuột vào .productBody */
+            }
+          }
+
+          .handleBoxBody {
+            width: 18%;
+
+            button {
+              padding: 6px 20px;
+              outline: none;
+              border: 1px solid transparent;
+              cursor: pointer;
+              background-color: var(--primary);
+              font-weight: 600;
+              color: #fff;
+              border-radius: 5px;
+              transition: 0.4s;
+
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+          }
+        }
+      }
+
+      .modalBackground {
+        width: 70vw;
+        height: 80vh;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        transition: 0.4s;
+
+        .modalContainer {
+          width: 1300px;
+          height: 700px;
+          border-radius: 12px;
+          background-color: white;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          display: flex;
+          flex-direction: column;
+          padding: 25px;
+          transform: translateY(-100%);
+          transition: transform 0.4s;
+
+          &.show {
+            transform: translateY(0);
+          }
+          .title {
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+          }
+
+          .titleCloseBtn {
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+              background-color: transparent;
+              border: none;
+              font-size: 25px;
+              cursor: pointer;
+            }
+          }
+
+          .body {
+            .tableProduct {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .tableProductHeader {
+              display: flex;
+              background-color: rgba($color: #ccc, $alpha: 0.7);
+              color: rgba($color: #000, $alpha: 0.7);
+              font-weight: 600;
+              margin-bottom: 20px;
+              align-items: center;
+
+              .IdProduct,
+              .imgProduct,
+              .nameProduct,
+              .quantityProduct,
+              .priceProduct {
+                flex: 1;
+                text-align: center;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+
+                span {
+                  flex: 1;
+                }
+              }
+            }
+            .IdProduct,
+            .imgProduct,
+            .nameProduct,
+            .quantityProduct,
+            .priceProduct {
+              flex: 1;
+              text-align: center;
+              padding: 10px;
+            }
+
+            .IdProduct {
+              span {
+                font-weight: 600;
+              }
+            }
+          }
+
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+
+          .footer {
+            flex: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+              width: 150px;
+              height: 45px;
+              margin: 10px;
+              border: none;
+              background-color: cornflowerblue;
+              color: white;
+              border-radius: 8px;
+              font-size: 20px;
+              cursor: pointer;
+            }
+            #cancelBtn {
+              background-color: crimson;
+            }
+          }
+          .tableBodyProduct {
+            display: flex;
+            flex-direction: column;
+
+            .rowBodyProduct {
+              display: flex;
+              padding: 20px;
+              margin-bottom: 20px;
+              border-bottom: 1.5px solid #ccc;
+              align-items: center;
+
+              .productImg img {
+                width: 40%;
+                display: block;
+                height: auto;
+                transition: 0.5s ease;
+                backface-visibility: hidden;
+              }
+
+              .productId,
+              .productImg,
+              .productName,
+              .productQuantity,
+              .productPrice {
+                flex: 1;
+                text-align: center;
+                display: flex;
+                align-items: center;
+
+                span {
+                  flex: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

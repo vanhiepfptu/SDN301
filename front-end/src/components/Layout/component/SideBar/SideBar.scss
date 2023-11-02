@@ -1,0 +1,83 @@
+.sideBar{
+    // padding: 4px 14px;
+    top: 0;
+    width: 100%;
+    height: 730px;
+    z-index: 2;
+    // padding: 10px;
+    background-color: rgba($color: #fff, $alpha: 0.7);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    position: sticky;
+    .logoSideBar{
+        text-align: center;
+        padding: 20px 0;
+        h1{
+                font-weight: 600;
+                font-family: sans-serif;
+                color: #000000;
+                // cursor: pointer;
+                letter-spacing: 4px;
+        }
+        
+        b{
+            color: #ff511c;
+        }
+    }
+
+    .listAction{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .active{
+            
+        }
+
+        .generalDashboard,.customerManager,.productManager,.orderManager,.addProduct,.categoryManager,.chatStaff{
+            padding: 10px;
+            display: flex;
+            background-color: rgba($color: #fff, $alpha: 0.8);
+            transition: .8s;
+            cursor: pointer;
+
+            &:hover{
+                background-color: rgba($color: #ccc, $alpha: 0.8);
+                &::before{
+                    content: '';
+                    width: 5px;
+                    height: 100% px;
+                    background-color: #ff511c;
+                    display: flex;
+                    position: relative;
+                    margin-left: 10px; 
+                    // transition: 1s;                    
+                }
+            }
+            
+
+            span{
+                padding: 10px;
+            }
+        }
+    }
+    .backHome{
+        margin-top: 100px;
+        text-align: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: .4s;
+
+         &:hover{
+                transform: scale(1.05);
+        }
+
+        .back{
+            padding: 20px;
+            background-color: var(--primary);
+            font-weight: 600;
+            color: #fff;
+
+           
+        }
+    }
+}

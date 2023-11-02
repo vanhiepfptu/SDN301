@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "650110164699e3d01b36a4f1",
+        "roleName": "user",
+        "description": "User role with limited access",
+        "createdAt": "2023-11-02T12:00:00.000Z",
+        "updatedAt": "2023-11-02T12:00:00.000Z"
+    },
+    {
+        "_id": "6501130c4699e3d01b36a4f2",
+        "roleName": "shipping",
+        "description": "Shipping role for handling shipments",
+        "createdAt": "2023-11-02T12:15:00.000Z",
+        "updatedAt": "2023-11-02T12:15:00.000Z"
+    },
+    {
+        "_id": "65010efa4699e3d01b36a4f0",
+        "roleName": "admin",
+        "description": "Administrator role with full access",
+        "createdAt": "2023-11-02T12:30:00.000Z",
+        "updatedAt": "2023-11-02T12:30:00.000Z"
+    },
+    {
+        "_id": "650113c74699e3d01b36a4f3",
+        "roleName": "staff",
+        "description": "Staff role with certain privileges",
+        "createdAt": "2023-11-02T12:45:00.000Z",
+        "updatedAt": "2023-11-02T12:45:00.000Z"
+    }
+]

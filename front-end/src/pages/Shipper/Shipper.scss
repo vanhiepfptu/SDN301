@@ -1,0 +1,486 @@
+/* Shipper.scss */
+
+.tableCate,
+.tableSubCate {
+  .tableHeader {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: rgba($color: #ccc, $alpha: 0.7);
+    color: rgba($color: #000, $alpha: 0.7);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    .nameHeader {
+      width: 30%;
+    }
+
+    .phoneHeader,
+    .addressHeader,
+    .productHeader,
+    .createdAt,
+    .quantityHeader {
+      width: 25%;
+    }
+  }
+
+  .tableBody {
+    // padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+    .rowBody {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1.5px solid #ccc;
+      align-items: center;
+
+      .nameBody {
+        width: 25%;
+        font-weight: 600;
+        display: flex;
+      }
+
+      .phoneBody {
+        width: 22%;
+      }
+
+      .createAtBody,
+      .createAtBody {
+        width: 20%;
+      }
+      .addressBody {
+        width: 25%;
+      }
+
+      .quantityBody {
+        width: 20%;
+      }
+
+      .priceBody {
+        width: 18%;
+      }
+
+      .statusBody {
+        width: 20%;
+      }
+
+      .reasonBody {
+        width: 25%;
+      }
+      .actionBody {
+        width: 22%;
+        button {
+          padding: 7px 10px;
+          background: #ff511c;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+      .productBody {
+        width: 25%;
+        position: relative;
+
+        img {
+          width: 40%;
+          display: block;
+          height: auto;
+          transition: 0.5s ease;
+          backface-visibility: hidden;
+        }
+
+        .middle {
+          transition: 0.5s ease;
+          opacity: 0; /* Thay đổi thành 0 để ẩn ngay từ đầu */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-105%, -50%);
+          -ms-transform: translate(-105%, -50%);
+          text-align: center;
+
+          .text {
+            font-size: 16px;
+            padding: 16px 40px;
+            cursor: pointer;
+
+            // button {
+            //   border: none;
+            //   font-size: 0px;
+            // }
+          }
+        }
+
+        &:hover img {
+          opacity: 0.3;
+        }
+
+        &:hover .middle {
+          opacity: 1; /* Thay đổi thành 1 khi di chuột vào .productBody */
+        }
+      }
+
+      .handleBoxBody {
+        width: 18%;
+
+        button {
+          padding: 6px 20px;
+          outline: none;
+          border: 1px solid transparent;
+          cursor: pointer;
+          background-color: var(--primary);
+          font-weight: 600;
+          color: #fff;
+          border-radius: 5px;
+          transition: 0.4s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  .modalStatusBackground {
+    width: 90vw;
+    height: 80vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transition: 0.4s;
+
+    .modalContainer {
+      width: 500px;
+      height: 500px;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      transform: translateY(-100%);
+      transition: transform 0.4s;
+
+      &.show {
+        transform: translateY(0);
+      }
+      .title {
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .titleCloseBtn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          background-color: transparent;
+          border: none;
+          font-size: 25px;
+          cursor: pointer;
+        }
+      }
+
+      .body {
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        text-align: center;
+        gap: 20px;
+        padding-top: 60px;
+
+        .status {
+          background-color: transparent;
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 400px;
+          border-radius: 20px;
+          position: relative;
+          z-index: 1;
+          transition: border-color 0.4s;
+        }
+
+        .status:focus {
+          border-color: var(--primary);
+          animation: fadeIn 0.4s;
+        }
+
+        .date {
+          background-color: transparent;
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 400px;
+          height: 40px;
+          border-radius: 10px;
+          .reason:focus {
+            border-color: var(--primary);
+            animation: fadeIn 0.4s;
+          }
+        }
+        .reason {
+          background-color: transparent;
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 400px;
+          height: 150px;
+          border-radius: 10px;
+          .reason:focus {
+            border-color: var(--primary);
+            animation: fadeIn 0.4s;
+          }
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .footer {
+        flex: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          width: 150px;
+          height: 45px;
+          margin: 10px;
+          border: none;
+          background-color: cornflowerblue;
+          color: white;
+          border-radius: 8px;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        #cancelBtn {
+          background-color: crimson;
+        }
+      }
+    }
+  }
+
+  .modalBackground {
+    width: 85vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transition: 0.4s;
+
+    .modalContainer {
+      width: 1300px;
+      height: 700px;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      transform: translateY(-100%);
+      transition: transform 0.4s;
+
+      &.show {
+        transform: translateY(0);
+      }
+      .title {
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .titleCloseBtn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          background-color: transparent;
+          border: none;
+          font-size: 25px;
+          cursor: pointer;
+        }
+      }
+
+      .body {
+        .tableProduct {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .tableProductHeader {
+          display: flex;
+          background-color: rgba($color: #ccc, $alpha: 0.7);
+          color: rgba($color: #000, $alpha: 0.7);
+          font-weight: 600;
+          margin-bottom: 20px;
+          align-items: center;
+
+          .IdProduct,
+          .imgProduct,
+          .nameProduct,
+          .quantityProduct,
+          .priceProduct {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+
+            span {
+              flex: 1;
+            }
+          }
+        }
+        .IdProduct,
+        .imgProduct,
+        .nameProduct,
+        .quantityProduct,
+        .priceProduct {
+          flex: 1;
+          text-align: center;
+          padding: 10px;
+        }
+
+        .IdProduct {
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .footer {
+        flex: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          width: 150px;
+          height: 45px;
+          margin: 10px;
+          border: none;
+          background-color: cornflowerblue;
+          color: white;
+          border-radius: 8px;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        #cancelBtn {
+          background-color: crimson;
+        }
+      }
+      .tableBodyProduct {
+        display: flex;
+        flex-direction: column;
+
+        .rowBodyProduct {
+          display: flex;
+          padding: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1.5px solid #ccc;
+          align-items: center;
+
+          .productImg img {
+            width: 40%;
+            display: block;
+            height: auto;
+            transition: 0.5s ease;
+            backface-visibility: hidden;
+          }
+
+          .productId,
+          .productImg,
+          .productName,
+          .productQuantity,
+          .productPrice {
+            flex: 1;
+            text-align: center;
+            display: flex;
+            align-items: center;
+
+            span {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Shipper.scss */
+
+/* Sidebar */
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 20px;
+  input {
+    padding: 8px 50px 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+
+  select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+}
+
+.shipper-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: auto; /* Thiết lập chiều cao 100% của viewport */
+  width: 100%; /* Thiết lập chiều rộng 100% */
+}
+
+.Search {
+  display: flex;
+  width: 100vh;
+  padding: 20px;
+}
+.table-container {
+  padding: 20px;
+  justify-content: space-between;
+  background: #eee9e6;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}

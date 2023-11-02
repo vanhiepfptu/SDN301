@@ -1,0 +1,302 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #e7e7e7;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .head button {
+    width: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ff9900;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .head button .icon {
+    font-size: 20px;
+  }
+  .column1 .card {
+    height: 55vh;
+    width: 50vh;
+    position: relative;
+  }
+
+  .userImage {
+    position: relative;
+    border-radius: 50%;
+    width: 18vh;
+    height: 18vh; /* Để đảm bảo hình ảnh nằm gọn trong border */
+    border: 6px solid #bbb7b7;
+    margin: 10px auto;
+  }
+  .userImage img {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Để đảm bảo hình ảnh nằm gọn trong border */
+    object-fit: cover;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .column1 h2 {
+    color: #333;
+    border-radius: 10px 10px 0 0;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  .column1 h4 {
+    color: #333;
+    text-align: center;
+  }
+
+  .column1 img {
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  .column2 .card {
+    height: 55vh;
+    width: 70vh;
+  }
+
+  .column2 h2 {
+    color: #333;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .column2 p {
+    font-style: italic;
+    color: #333;
+  }
+
+  .create {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .emailDetail,
+  .phoneDetail,
+  .dobDetail {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .create label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .emailDetail input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .phoneDetail input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .dobDetail input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .genderDetail {
+    padding: 10px 9px;
+  }
+
+  .genderDetail input {
+    margin: 10px 10px;
+  }
+
+  .loadGender {
+    margin: 40px;
+  }
+
+  .avatarUser {
+    margin: 10px 9px;
+  }
+
+  .avatarUser input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .create button {
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary);
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .modalBackground {
+    width: 10vw;
+    height: 80vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    transition: 0.4s;
+
+    .modalContainer {
+      width: 500px;
+      height: 500px;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      transform: translateY(-100%);
+      transition: transform 0.4s;
+
+      &.show {
+        transform: translateY(0);
+      }
+      .title {
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .titleCloseBtn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          background-color: transparent;
+          border: none;
+          font-size: 25px;
+          cursor: pointer;
+        }
+      }
+
+      .body {
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.7rem;
+        text-align: center;
+        gap: 20px;
+        padding-top: 60px;
+
+        .registerEmail {
+          background-color: transparent;
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 400px;
+          border-radius: 20px;
+          position: relative;
+          z-index: 1;
+          transition: border-color 0.4s;
+        }
+
+        .registerGender {
+          display: flex;
+        }
+        .registerGender .male {
+          padding: 0px 20px;
+        }
+        .status:focus {
+          border-color: var(--primary);
+          animation: fadeIn 0.4s;
+        }
+
+        .date {
+          background-color: transparent;
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 400px;
+          height: 40px;
+          border-radius: 10px;
+          .reason:focus {
+            border-color: var(--primary);
+            animation: fadeIn 0.4s;
+          }
+        }
+        .reason {
+          background-color: transparent;
+          border: 1px solid #ccc;
+          padding: 10px;
+          width: 400px;
+          height: 150px;
+          border-radius: 10px;
+          .reason:focus {
+            border-color: var(--primary);
+            animation: fadeIn 0.4s;
+          }
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .footer {
+        flex: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          width: 150px;
+          height: 45px;
+          margin: 10px;
+          border: none;
+          background-color: cornflowerblue;
+          color: white;
+          border-radius: 8px;
+          font-size: 20px;
+          cursor: pointer;
+        }
+        #cancelBtn {
+          background-color: crimson;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,208 @@
+.cartPage{
+    width: 80%;
+    // background-color: rgba($color: #fff, $alpha: 0.8);
+    padding: 20px;
+
+    .cartPageTitle{
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 24px;
+        color: var(--primary);
+        letter-spacing: 2.5px;
+        word-spacing: 5px;
+        text-align: center;
+    }
+    .overallCart{
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: right;
+        // display: flex;
+        // justify-content: space-between;
+        .cover{
+            width: 40%;
+        }
+        span{
+            
+            font-weight: 500;
+            color: rgba($color: #000000, $alpha: 0.7);
+        }
+    }
+
+    .listItems{
+        display: flex;
+        flex-direction: column;
+
+        .itemBox{
+            display: flex;
+            align-items: center;
+            background-color: rgba($color: #fff, $alpha: 0.8);
+            padding: 20px;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            .leftBox{
+                display: flex;
+                width: 45%;
+                justify-content: space-around;
+                img{
+                    width: 30%;
+                    object-fit: cover;
+                    height: 50%;
+                }
+                .detailItem{
+                    width: 60%;
+                    .itemTitle{
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        margin: 4px 0;
+                    }   
+
+                    .itemDescription{
+                        margin: 4px 0;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .productTotalPrice{
+                width: 20%;
+                text-align: center;
+                
+                label{
+                    font-weight: 700;
+                    color: var(--primary);
+                }
+            }
+
+            .totalItem{
+                width: 30%;
+                display: flex;
+                justify-content: space-around;
+
+                .countItem{
+                    
+                     button {
+                        padding: 2px 6px;
+                        border: 1px solid rgba(24, 11, 15, 0.3);
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                    }
+                    .numberItem{
+                        padding: 4px 8px;
+                        color: #f9004d;
+                        font-weight: bold;
+                    }
+                }
+
+                .deleteItem{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .bill{
+        display: flex;
+        margin-top: 20px;
+        justify-content: right;
+
+        .voucher{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+
+            .voucherQuestion{
+                color: rgba($color: #000000, $alpha: 0.7);
+                font-weight: 600;
+                letter-spacing: 1.5px;
+                margin-bottom: 10px;
+            }
+
+            .submitVoucher{
+                // display: flex;
+
+                .inputVoucher{
+                    padding: 8px 34px 8px 4px ;
+                    width: 40%;
+                    border: 1px solid transparent;
+                    outline: none;
+                    transition: .4s;
+
+                    &:focus{
+                        border: 1px solid var(--primary);
+                        border-right: 1px solid transparent;
+                    }
+                }
+                .sendVoucher{
+                    padding: 8px 16px;
+                    background-color: var(--primary);
+                    outline: none;
+                    border: 1px solid transparent;
+                    color: #fff;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .totalPrice{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+
+            
+
+            .total, .discount, .subtotal{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                
+                .leftTotal, .leftDis, .leftSub{
+                    width: 40%;
+                    text-align: right;
+                    .totalTitle, .discountTitle, .subtotalTitle{
+                        letter-spacing: 1px;
+                    }
+                }
+                
+                .rightTotal, .rightDis, .rightSub{
+                    width: 40%;
+                    text-align: left;
+                    .totalPrice, .subtotalPrice{
+                        color: var(--primary);
+                    }
+                    .discountNumber{
+                        color: rgba($color: red, $alpha: 0.7);
+                    }
+
+                    .totalPrice{
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .paying{
+                display: flex;
+                justify-content: right;
+                margin-right: 20%;
+
+                button{
+                    padding: 8px 20px;
+                    outline: none;
+                    border: 1px solid transparent;
+                    color: #fff;
+                    background-color: var(--primary);
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: .4s;
+
+                    &:hover{
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}

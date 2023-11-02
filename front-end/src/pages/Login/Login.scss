@@ -1,0 +1,148 @@
+.container {
+  width: 100%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.loginContent {
+  display: flex;
+  justify-content: center;
+}
+
+.leftContent {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+  img {
+    margin-top: 20px;
+    z-index: 0;
+    position: relative;
+    width: 75%;
+    margin-bottom: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  h1 {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    top: 30%;
+    width: 300px;
+    text-align: center;
+  }
+  h2 {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 1rem;
+    top: 90%;
+    width: 300px;
+    text-align: center;
+    border-bottom: 1px solid rgba(216, 211, 211, 0.6);
+  }
+}
+.rightContent {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  align-items: center;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  padding-right: 40px;
+  form {
+    width: 80%;
+  }
+  .input {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    label {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    input {
+      padding: 4px 8px;
+      border: 1px solid transparent;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+      outline: none;
+
+      &:focus {
+        border-bottom: 2px solid #f9004d;
+      }
+    }
+  }
+
+  .googleIcon {
+    color: blue;
+    transition: 0.4s;
+    background-color: #fff;
+  }
+
+  .buttonGoogle {
+    padding: 8px 14px;
+    border: 1px solid transparent;
+    background-color: #f9004d;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  .handle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    button {
+      margin: 8px 0;
+      border-radius: 4px;
+      background-color: #f9004d;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .signUpBtn{
+      margin: 8px 0;
+      border-radius: 4px;
+      background-color: #f9004d;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: 0.4s;
+      width: 40%;
+    }
+    .remember {
+      color: #f9004d;
+      padding: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      :hover {
+        color: black;
+      }
+    }
+  }
+  .register {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p:hover {
+    color: black;
+  }
+}

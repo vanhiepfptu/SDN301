@@ -1,0 +1,21 @@
+
+.headerDashboard{
+    display: flex;
+    justify-content: right;
+    padding: 20px 0px 20px 0;
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    position: sticky;
+    top: 0;
+    
+
+    .inforManager{
+        width: 20%;
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 20%;
+            margin-right: 16px;
+        }
+    }
+}

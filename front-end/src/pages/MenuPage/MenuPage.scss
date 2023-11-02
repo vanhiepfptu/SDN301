@@ -1,0 +1,139 @@
+.menuPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .menuHeader {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .optionDisplay {
+      width: 30%;
+      margin-left: 30px;
+
+      .option {
+        padding: 8px 16px 8px 3px;
+        border: 1px solid transparent;
+        outline: none;
+        border-bottom: 2px solid #ccc;
+        transition: 0.4s;
+        margin-right: 10px;
+
+        &:focus {
+          border-bottom: 2px solid var(--primary);
+        }
+      }
+    }
+
+    .menuTitle {
+      color: var(--primary);
+      font-size: 24px;
+      letter-spacing: 2px;
+      width: 40%;
+      text-align: center;
+    }
+
+    .menuSearch {
+      display: flex;
+      height: 70%;
+      align-items: center;
+      justify-content: right;
+      width: 30%;
+      padding-right: 30px;
+
+      .inputSearchMenu {
+        padding: 6px 16px 6px 6px;
+        border: 2px solid transparent;
+        outline: none;
+        transition: 0.4s;
+        border-radius: 5px;
+        width: 70%;
+
+        &:focus {
+          border-bottom: 2px solid var(--primary);
+        }
+      }
+    }
+  }
+
+  .cardList {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    .card {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      // margin: 20px 16px;
+      padding: 8px;
+      // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+      border-radius: 10px;
+      transition: 0.4s;
+      margin-bottom: 30px;
+
+      img {
+        width: 80%;
+        height: 180px;
+        padding-bottom: 16px;
+        border-radius: 5px;
+        height: 90%;
+        transition: 0.5s;
+        object-fit: cover;
+
+        &:hover {
+          filter: grayscale(1);
+        }
+      }
+
+      .foodName {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .addBtn {
+        padding: 8px 24px;
+        font-weight: 500;
+        border: 1px solid transparent;
+        cursor: pointer;
+        background-color: var(--primary);
+        color: #ffffff;
+        transition: 0.4s;
+        border-radius: 5px;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      &:hover {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+          rgba(17, 17, 26, 0.1) 0px 8px 24px,
+          rgba(17, 17, 26, 0.1) 0px 16px 56px;
+      }
+    }
+  }
+
+  .paging {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    .pagingAction {
+      width: 15%;
+      display: flex;
+      justify-content: center;
+
+      button {
+        padding: 4px;
+      }
+    }
+  }
+}
